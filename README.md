@@ -14,3 +14,10 @@
 - _PostgreSQL_
 
 #### Para a recuperação de email foi utilizado o *MAILTRAP* para testes e *NODEMAILER* para a conexão; 
+
+#### Outras dependencias utilizadas: 
+- express;
+- nodemon;
+- pg;
+- bcrypt;
+- jsonwebtoken;
