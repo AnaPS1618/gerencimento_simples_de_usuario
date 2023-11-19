@@ -7,7 +7,7 @@
 - _ATUALIZAÇÃO_
 - _RECUPERAÇÃO DE SENHA_
 
-#### Utilizando ferramentas: 
+#### Ferramentas utilizadas: 
 
 - _Java Script_
 - _Node.js_
