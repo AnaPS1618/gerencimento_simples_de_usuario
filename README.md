@@ -6,3 +6,11 @@
 - _LOGIN_
 - _ATUALIZAÇÃO_
 - _RECUPERAÇÃO DE SENHA_
+
+#### Utilizando ferramentas: 
+
+- _Java Script_
+- _Node.js_
+- _PostgreSQL_
+
+#### Para a recuperação de email foi utilizado o *MAILTRAP* para testes e *NODEMAILER* para a conexão; 
