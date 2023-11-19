@@ -1,10 +1,5 @@
 # gerencimento_simples_de_usuario
 
-<<<<<<< HEAD
-
-
-
-=======
 #### Repositório back-end com foco em um gerenciamento de configurações simples de usuário: 
 
 - _CADASTRO_
@@ -27,4 +22,4 @@
 - pg;
 - bcrypt;
 - jsonwebtoken;
->>>>>>> e6c7bf816a69151dcd772ede975525eea67f8ce0
+
