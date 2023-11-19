@@ -12,6 +12,7 @@
 - _Java Script_
 - _Node.js_
 - _PostgreSQL_
+- _Postman_
 
 ### Para a recuperação de email foi utilizado o *MAILTRAP* para testes e *NODEMAILER* para a conexão; 
 
