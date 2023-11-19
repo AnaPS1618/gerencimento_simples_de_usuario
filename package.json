@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.7",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.3"
+  },
+  "name": "gerencimento_simples_de_usuario",
+  "description": "Windows 11",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon index.js "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
