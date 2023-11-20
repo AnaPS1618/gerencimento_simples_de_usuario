@@ -1,9 +1,10 @@
 const express = require('express')
-const { cadastroDeUsuario } = require('../../middleware/cadastro')
-const { loginUsario } = require('../../middleware/login')
-const validandoToken = require('../../auth/autenticacaoDoToken')
-const { atualizarUsuario } = require('../../middleware/atualizacao')
-const { recuperarSenha } = require('../../middleware/recuperacaoSenha')
+const { cadastroDeUsuario } = require('../controllers/cadastro')
+const { loginUsario } = require('../controllers/login')
+const { recuperarSenha } = require('../controllers/recuperacaoSenha')
+const validandoToken = require('../middleware/auth/token.auth')
+const { atualizarUsuario } = require('../controllers/atualizacao')
+
 
 const rotas = express()
 

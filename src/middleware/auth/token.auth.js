@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
-const senhaSecreta = require('../auth/senhaJWT');
-const pool = require('../config/conexao');
+const senhaSecreta = require('../senhaJWT');
+const pool = require('../../config/conexao');
 
 
 const validandoToken = async (req, res, next) => {

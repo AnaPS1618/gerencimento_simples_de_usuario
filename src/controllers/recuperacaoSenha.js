@@ -1,7 +1,8 @@
-const senhaSecreta = require('../auth/senhaJWT')
+
 const pool = require('../config/conexao')
 const jwt = require('jsonwebtoken')
 const transport = require('../mail/transport')
+const senhaSecreta = require('../middleware/senhaJWT')
 
 
 const recuperarSenha = async (req, res) => {

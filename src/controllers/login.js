@@ -1,7 +1,7 @@
 const pool = require("../config/conexao")
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const senhaSecreta = require("../auth/senhaJWT")
+const senhaSecreta = require("../middleware/senhaJWT")
 
 
 const loginUsario = async (req, res) => {

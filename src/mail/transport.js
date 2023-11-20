@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
-const { verificacaoToken } = require('../middleware/recuperacaoSenha');
+const validandoToken = require('../middleware/auth/token.auth');
+
 
 const transport = nodemailer.createTransport({
     host: "sandbox.smtp.mailtrap.io",
@@ -7,7 +8,7 @@ const transport = nodemailer.createTransport({
     auth: {
       user: "bca8b99dbc7cde",
       pass: "158f6232e93285",
-      refreshToken: verificacaoToken
+      refreshToken: validandoToken
     }
 });
 
