@@ -22,5 +22,5 @@
 - pg;
 - bcrypt;
 - jsonwebtoken;
-- -dotenv;
+- dotenv;
 
