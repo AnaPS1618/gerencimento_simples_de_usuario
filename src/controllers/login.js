@@ -1,7 +1,8 @@
-const pool = require("../config/conexao")
+
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const senhaSecreta = require("../middleware/senhaJWT")
+const knex = require('../config/conexao')
 
 
 const loginUsario = async (req, res) => {
@@ -15,14 +16,9 @@ const loginUsario = async (req, res) => {
                         .json('inseir campos obrigatórios')
         }
 
-        const buscandoLogin = `
-            select * from cadastro 
-            where email = $1;
-        `
 
-        const loginLocalizado = await pool.query(buscandoLogin, 
-            [email]
-        )
+        const loginLocalizado = await knex('cadastro')
+                                    .where('email', email)
             
         const validandoSenha = await bcrypt.compare(senha, 
             loginLocalizado.rows[0].senha
