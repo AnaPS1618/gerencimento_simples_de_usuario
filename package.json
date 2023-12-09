@@ -4,8 +4,9 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
     "nodemailer": "^6.9.7",
-    "nodemon": "^3.0.1",
+    "nodemon": "^3.0.2",
     "pg": "^8.11.3"
   },
   "name": "gerencimento_simples_de_usuario",
