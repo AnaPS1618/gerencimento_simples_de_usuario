@@ -1,6 +1,6 @@
 
 const bcrypt = require('bcrypt')
-const pool = require('../config/conexao')
+const knex = require('../config/conexao')
 
 const cadastroDeUsuario = async (req, res) => {
     const {nome, email, senha} = req.body
@@ -13,16 +13,13 @@ const cadastroDeUsuario = async (req, res) => {
 
         const criptografandoSenha = await bcrypt.hash(senha, 15)
 
-        const cadastrandoUsuario = `
-            insert into cadastro
-            (nome, email, senha)
-            values
-            ($1, $2, $3) returning *;
-        `
 
-        const uuarioCadastrado = await pool.query(cadastrandoUsuario, 
-            [nome, email, criptografandoSenha]
-        )
+        const uuarioCadastrado = await knex('cadastro')
+                                    .insert({
+                                        nome: nome,
+                                        email: email, 
+                                        senha: criptografandoSenha
+                                    }).debug()
 
         const {senha: _, ...novoUsuario} = uuarioCadastrado.rows[0]
 
