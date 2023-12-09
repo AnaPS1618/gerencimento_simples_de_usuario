@@ -1,8 +1,9 @@
 
-const pool = require('../config/conexao')
+
 const jwt = require('jsonwebtoken')
 const transport = require('../mail/transport')
 const senhaSecreta = require('../middleware/senhaJWT')
+const knex = require('../config/conexao')
 
 
 const recuperarSenha = async (req, res) => {
@@ -15,14 +16,10 @@ const recuperarSenha = async (req, res) => {
                         .json('inseir campos obrigatórios')
         }
 
-        const buscandoEmail = `
-            select * from cadastro 
-            where email = $1;
-        `
 
-        const verificandoEmail = await pool.query(buscandoEmail, 
-            [email]
-        )
+        const verificandoEmail = await knex('cadastro')
+                                    .where('email', email)
+                                    .debug()
 
         if(verificandoEmail >= 1){
             return res.status(400)
